@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>明朝官场实录 · 陆秉文三十回合</title>
+<style>
+:root{--paper:#f2ecdf;--paper2:#fbf7ee;--ink:#2b2419;--ink2:#6b5f4a;--border:#c9b895;--red:#8b2e2e;--gold:#a8813a;--green:#4a6b4a;--shadow:0 2px 12px rgba(60,45,20,.12);}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Songti SC","STSong","SimSun","Noto Serif SC",serif;background:var(--paper);color:var(--ink);line-height:1.9;background-image:radial-gradient(circle at 18% 12%,rgba(168,129,58,.05),transparent 55%),radial-gradient(circle at 82% 78%,rgba(139,46,46,.04),transparent 55%);min-height:100vh;padding-bottom:60px;}
+.app{max-width:920px;margin:0 auto;padding:0 16px}
+.topbar{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;padding:12px 18px;margin:12px 0 0;border:1px solid var(--border);border-radius:6px;background:linear-gradient(180deg,#fbf7ee,#f4ecdd);box-shadow:var(--shadow);}
+.title{font-size:16px;font-weight:700;letter-spacing:3px;color:var(--red)}
+.title small{font-size:11px;letter-spacing:1px;color:var(--ink2);margin-left:8px;font-weight:400}
+.hud{font-size:11.5px;color:var(--ink2);display:flex;gap:8px;flex-wrap:wrap}
+.hud b{color:var(--red)}
+.hud .g{color:var(--green)}.hud .r{color:var(--red)}
+.story{margin-top:12px;background:var(--paper2);border:1px solid var(--border);border-radius:6px;padding:28px 34px;box-shadow:var(--shadow);min-height:420px;}
+@media(max-width:600px){.story{padding:18px 16px}}
+.date-bar{font-size:12.5px;letter-spacing:2px;color:var(--gold);margin-bottom:6px;display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;}
+.date-bar .office{color:var(--red);font-weight:700;letter-spacing:1px}
+.scene-title{font-size:18px;letter-spacing:3px;color:var(--red);font-weight:700;margin-bottom:14px;padding-bottom:9px;border-bottom:1px dashed var(--border);}
+.text{font-size:15px;line-height:2.1}
+.text p{margin-bottom:12px}
+.text .dim{color:var(--ink2);font-size:13.5px}
+.text .hl{color:var(--red);font-weight:700}
+.text .gold{color:var(--gold);font-weight:700}
+.dialogue{margin:14px 0;padding:10px 16px;border-left:3px solid var(--gold);background:rgba(201,184,149,.14);border-radius:0 5px 5px 0;}
+.dialogue .speaker{display:block;font-size:12.5px;letter-spacing:2px;color:var(--gold);font-weight:700;margin-bottom:4px;}
+.dialogue .line{font-size:14.5px;line-height:2}
+.inner-voice{margin:12px 0;padding:9px 14px;border-left:3px solid var(--ink2);background:rgba(107,95,74,.08);border-radius:0 5px 5px 0;font-size:13.5px;color:var(--ink2);font-style:italic;}
+.roll-box{text-align:center;padding:20px;margin:16px 0;background:linear-gradient(180deg,#fdfaf3,#f2e8d4);border:2px solid var(--border);border-radius:8px;}
+.roll-box .face{font-size:52px;font-weight:700;letter-spacing:8px;line-height:1.1;margin-bottom:8px;}
+.roll-box .verdict{font-size:13.5px;color:var(--ink2);letter-spacing:2px;}
+.f-de{color:var(--gold)}.f-cai{color:var(--green)}.f-gong{color:#3a6ea5}.f-zang{color:var(--red)}
+.options{margin-top:22px;display:flex;flex-direction:column;gap:10px;}
+.opt{font-family:inherit;font-size:14.5px;text-align:left;padding:14px 18px 14px 42px;background:linear-gradient(180deg,#fdfaf3,#f1e8d6);border:1px solid var(--border);border-radius:6px;color:var(--ink);cursor:pointer;transition:.18s;position:relative;line-height:1.7;}
+.opt::before{content:"▸";position:absolute;left:16px;top:15px;color:var(--gold);transition:.18s;font-size:13px;}
+.opt:hover{background:linear-gradient(180deg,#fffdf7,#f7efdf);border-color:var(--gold);transform:translateX(4px);box-shadow:0 4px 14px rgba(168,129,58,.2);}
+.opt:hover::before{color:var(--red);left:20px}
+.opt .tag{display:inline-block;font-size:11px;padding:1px 8px;border-radius:3px;margin-bottom:3px;margin-right:5px;letter-spacing:1px;}
+.t-wen{background:rgba(74,107,74,.18);color:var(--green);border:1px solid rgba(74,107,74,.35)}
+.t-xian{background:rgba(139,46,46,.14);color:var(--red);border:1px solid rgba(139,46,46,.3)}
+.t-tan{background:rgba(168,129,58,.16);color:var(--gold);border:1px solid rgba(168,129,58,.35)}
+.t-ju{background:rgba(107,95,74,.12);color:var(--ink2);border:1px solid rgba(107,95,74,.3)}
+.opt .sub{display:block;font-size:12.5px;color:var(--ink2);margin-top:3px;line-height:1.7}
+.ending{margin-top:16px;text-align:center;padding:20px 0}
+.ending .mark{font-size:12px;letter-spacing:8px;color:var(--gold);margin-bottom:8px}
+.ending h1{font-size:26px;letter-spacing:5px;color:var(--red);margin-bottom:14px}
+.ending .desc{max-width:620px;margin:0 auto 20px;text-align:left;font-size:14.5px;line-height:2.1}
+.ending .summary{max-width:620px;margin:0 auto;background:linear-gradient(180deg,#fffdf7,#f6efe0);border:1px solid var(--border);border-radius:8px;padding:16px 20px;text-align:left;font-size:13.5px;color:var(--ink2);line-height:2}
+.ending .summary b{color:var(--red)}
+.ending .stats{max-width:620px;margin:14px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:6px;font-size:12.5px;color:var(--ink2);text-align:center}
+.ending .stats span{background:rgba(201,184,149,.2);border:1px solid var(--border);border-radius:5px;padding:7px 3px}
+.ending .stats b{display:block;font-size:16px;color:var(--red);margin-top:2px}
+.btn-restart{font-family:inherit;font-size:14.5px;letter-spacing:5px;padding:11px 40px;margin-top:24px;background:linear-gradient(180deg,#9c3838,#7a2626);color:#fdf8ec;border:1px solid #6a2020;border-radius:5px;cursor:pointer;transition:.2s;box-shadow:0 3px 10px rgba(139,46,46,.28);}
+.btn-restart:hover{background:linear-gradient(180deg,#b04a4a,#8b2e2e);transform:translateY(-2px)}
+.fade{animation:fade .4s ease}
+@keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.log-toggle{position:fixed;right:14px;bottom:14px;width:42px;height:42px;border-radius:50%;background:var(--red);color:#fdf8ec;border:none;cursor:pointer;font-size:17px;box-shadow:0 3px 12px rgba(139,46,46,.35);z-index:100;}
+.log-panel{position:fixed;right:14px;bottom:64px;width:280px;max-height:360px;overflow-y:auto;background:var(--paper2);border:1px solid var(--border);border-radius:8px;padding:12px;box-shadow:0 8px 24px rgba(60,45,20,.18);z-index:99;display:none;}
+.log-panel.show{display:block}
+.log-panel h4{font-size:11.5px;letter-spacing:3px;color:var(--red);margin-bottom:6px;border-bottom:1px solid var(--border);padding-bottom:5px}
+.log-item{font-size:11.5px;color:var(--ink2);padding:4px 0;border-bottom:1px dotted #ddd2ba;line-height:1.6}
+.log-item:last-child{border-bottom:none}
+.log-item .ly{color:var(--gold);font-weight:700;margin-right:4px}
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="topbar">
+    <div class="title">明朝官场实录<small>陆秉文 · 三十回合</small></div>
+    <div class="hud" id="hud"></div>
+  </div>
+  <div class="story fade" id="story"></div>
+</div>
+<button class="log-toggle" id="logBtn">📜</button>
+<div class="log-panel" id="logPanel"><h4>履历记事</h4><div id="logList"></div></div>
+
+<script>
+/* ============================================================
+   状态 —— 严格按文档初始值
+   ============================================================ */
+const G = {
+  turn:1,
+  文才:65, 谋略:72, 交际:78, 体质:58, 魅力:70, 运气:55,
+  政绩:0, 银钱:350, 人脉:0,
+  严党:0, 徐党:0, 清流:0,
+  office:null, officeStartTurn:0,
+  examTitle:'秀才',
+  km:{德:0,才:0,功:0,赃:0},
+  married:false, spouseType:null,
+  outerPostCount:0,     // 外放经历次数
+  flags:{},
+  log:[],
+  over:false,
+  endReason:''
+};
+
+const OFFICES=[
+  {lv:0,name:'白身',rank:'—'},
+  {lv:1,name:'知县',rank:'正七品',path:'外'},
+  {lv:2,name:'推官',rank:'正七品',path:'外'},
+  {lv:3,name:'给事中',rank:'正七品',path:'京'},
+  {lv:4,name:'主事',rank:'正六品',path:'京'},
+  {lv:5,name:'知府',rank:'从四品',path:'外'},
+  {lv:6,name:'参政',rank:'从三品',path:'外'},
+  {lv:7,name:'按察使',rank:'正三品',path:'外'},
+  {lv:8,name:'布政使',rank:'从二品',path:'外'},
+  {lv:9,name:'侍郎',rank:'正三品',path:'京'},
+  {lv:10,name:'尚书',rank:'正二品',path:'京'},
+  {lv:11,name:'内阁大学士',rank:'正五品兼尚书衔',path:'京'}
+];
+
+const SEASONS=['春','夏','秋','冬'];
+const $=id=>document.getElementById(id);
+const rnd=(a,b)=>Math.floor(Math.random()*(b-a+1))+a;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const chance=p=>Math.random()<p;
+
+function dateOf(t){
+  // 第1回合=嘉靖二十五年春
+  const y=1546+Math.floor((t-1)/4);
+  return {year:y,season:SEASONS[(t-1)%4],era:`嘉靖${y-1521}年`};
+}
+function currentDate(){return dateOf(G.turn);}
+function officeName(){return G.office?`${G.office.name}（${G.office.rank}）`:G.examTitle;}
+function addLog(text){
+  const d=currentDate();
+  G.log.push({era:d.era,season:d.season,text});
+  renderLog();
+}
+function renderHUD(){
+  const f=v=>v>0?`<b class="g">+${v}</b>`:v<0?`<b class="r">${v}</b>`:'0';
+  const d=currentDate();
+  $('hud').innerHTML=`
+    <span>第<b>${G.turn}</b>回合</span>
+    <span>${d.era}<b>${d.season}</b></span>
+    <span>文<b>${G.文才}</b></span>
+    <span>谋<b>${G.谋略}</b></span>
+    <span>交<b>${G.交际}</b></span>
+    <span>体<b>${G.体质}</b></span>
+    <span>运<b>${G.运气}</b></span>
+    <span>政<b>${G.政绩}</b></span>
+    <span>银<b>${G.银钱}</b></span>
+    <span>脉<b>${G.人脉}</b></span>
+    <span>严${f(G.严党)}</span>
+    <span>徐${f(G.徐党)}</span>
+    <span>清${f(G.清流)}</span>`;
+}
+function renderLog(){
+  const el=$('logList');if(!el)return;
+  if(!G.log.length){el.innerHTML='<div class="log-item" style="opacity:.5">尚无记事</div>';return;}
+  el.innerHTML=G.log.slice(-40).reverse().map(l=>
+    `<div class="log-item"><span class="ly">${l.era}${l.season}</span>${l.text}</div>`).join('');
+}
+function renderScene(sc){
+  const d=currentDate();
+  let html=`<div class="date-bar"><span>第${G.turn}回合 · ${d.era} · ${d.season}</span><span class="office">${officeName()}</span></div>`;
+  html+=`<div class="scene-title">${sc.title}</div>`;
+  const text=typeof sc.text==='function'?sc.text():sc.text;
+  html+=`<div class="text">${text}</div>`;
+  const opts=typeof sc.options==='function'?sc.options():sc.options;
+  if(opts&&opts.length){
+    html+=`<div class="options">`;
+    opts.forEach((o,i)=>{
+      const tag=o.tag?`<span class="tag ${o.tagClass||'t-wen'}">${o.tag}</span>`:'';
+      const sub=o.sub?`<span class="sub">${o.sub}</span>`:'';
+      html+=`<button class="opt" data-i="${i}">${tag}${o.label}${sub}</button>`;
+    });
+    html+=`</div>`;
+  }
+  const story=$('story');
+  story.className='story fade';
+  story.innerHTML=html;
+  if(opts){
+    story.querySelectorAll('.opt').forEach(btn=>{
+      btn.onclick=()=>{
+        const o=opts[+btn.dataset.i];
+        if(o.effect)o.effect();
+        renderHUD();
+        if(G.over)return;
+        // 推进回合
+        if(o.next!==undefined)G.turn=o.next;
+        else G.turn++;
+        renderHUD();
+        nextScene();
+      };
+    });
+  }
+  renderHUD();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+/* ============================================================
+   主循环
+   ============================================================ */
+function nextScene(){
+  if(G.over)return;
+  if(G.turn>30){return endGame('正常终局');}
+  const sc=SCENES[G.turn];
+  if(sc)return renderScene(sc);
+  // 未定义的回合：按文档的"丝滑回流"机制，强制回到主线
+  return renderGenericReturn();
+}
+
+function renderGenericReturn(){
+  const d=currentDate();
+  renderScene({
+    title:`${d.era} · ${d.season} · 主线回流`,
+    text:`<p>吏部考满文册到，同年密信至，京中科道缺员的消息传来。</p>
+          <p class="dim">支线回归主线，你必须继续面对官场升迁。</p>`,
+    options:[
+      {label:'继续',tag:'主线',tagClass:'t-wen',sub:'进入下一回合',
+       effect:()=>{addLog('主线回流。');}}
+    ]
+  });
+}
+
+/* ============================================================
+   考满系统 —— 严格按文档"德才功赃"
+   ============================================================ */
+function doKaoman(cb){
+  const luck=G.运气,wc=G.文才,zj=G.政绩;
+  // 基础概率（文档公式）
+  let pDe=Math.max(2,20+(luck-50)*0.30);
+  let pCai=Math.max(5,35+(wc-50)*0.20);
+  let pGong=Math.max(5,30+(zj-50)*0.20);
+  let pZang=Math.max(5,15-(luck-50)*0.20);
+  // 党争修正
+  pDe += Math.max(0,G.清流)*0.8;
+  pCai += Math.max(0,G.徐党)*0.6 + Math.max(0,G.严党)*0.5;
+  pGong += Math.max(0,G.严党)*0.6 + Math.max(0,G.徐党)*0.4;
+  pZang += Math.max(0,-G.清流)*0.8 + (G.flags.贪墨?10:0);
+  if(G.office&&G.office.lv>=5)pZang+=4;
+  if(G.office&&G.office.lv>=7)pZang+=5;
+  const total=pDe+pCai+pGong+pZang;
+  let roll=Math.random()*total,face;
+  if(roll<pDe)face='德';
+  else if(roll<pDe+pCai)face='才';
+  else if(roll<pDe+pCai+pGong)face='功';
+  else face='赃';
+
+  G.km[face]++;
+  const FACES={
+    '德':{cls:'f-de',v:'操守清廉，政绩卓异 —— 越级晋升'},
+    '才':{cls:'f-cai',v:'才力优长 —— 正常晋升一级'},
+    '功':{cls:'f-gong',v:'任内劳绩可纪 —— 正常晋升，可优先选缺'},
+    '赃':{cls:'f-zang',v:'贪酷、浮躁、不谨 —— 降职或调用'}
+  };
+  const oldLv=G.office?G.office.lv:0;
+  let newLv=oldLv,resultText='';
+  if(face==='德'){newLv=Math.min(oldLv+2,11);G.清流+=2;G.政绩+=3;resultText='越级晋升。';}
+  else if(face==='才'){newLv=Math.min(oldLv+1,11);G.文才+=2;resultText='正常晋升一级。';}
+  else if(face==='功'){newLv=Math.min(oldLv+1,11);G.政绩+=2;resultText='正常晋升，可优先选缺。';}
+  else{newLv=Math.max(1,oldLv-1);G.清流-=3;resultText='降职调用。';}
+
+  const oldName=G.office?G.office.name:'—';
+  if(newLv>0){
+    const no=OFFICES.find(o=>o.lv===newLv)||OFFICES[1];
+    G.office={lv:newLv,name:no.name,rank:no.rank,path:no.path||'外'};
+    if(no.path==='外')G.outerPostCount++;
+  }
+  G.officeStartTurn=G.turn;
+  addLog(`考满：${face}面。${oldName}→${G.office?G.office.name:'白身'}`);
+
+  const updown=newLv>oldLv?`<span style="color:var(--green)">晋升 ${newLv-oldLv} 级</span>`:newLv<oldLv?`<span style="color:var(--red)">降职</span>`:`<span style="color:var(--ink2)">留任</span>`;
+  renderScene({
+    title:'考满 · 铨选迁转',
+    text:`<p>三年一考，吏部考功司将你的履历呈上。堂官闭门会议，司礼监秉笔太监在侧监看。</p>
+    <div class="dialogue"><span class="speaker">考功司堂官</span><span class="line">凡升必满考。考满等第，决定升迁幅度。</span></div>
+    <p>你屏息等待。掣签之声，骰落而定。</p>
+    <div class="roll-box"><div class="face ${FACES[face].cls}">${face}</div><div class="verdict">${FACES[face].v}</div></div>
+    <p>${resultText}</p>
+    <p>原任：<b>${oldName}</b> → 新职：<b class="hl">${G.office?G.office.name:'白身'}</b>${G.office?'（'+G.office.rank+'）':''}　${updown}</p>`,
+    options:[{label:'谢恩赴任',next:G.turn+1,effect:()=>{if(cb)cb();}}]
+  });
+}
+
+/* ============================================================
+   结局系统 —— 严格按文档结局表
+   ============================================================ */
+function endGame(reason){
+  if(G.over)return;G.over=true;G.endReason=reason;
+  const lv=G.office?G.office.lv:0;
+  const km=G.km;const totalKM=km.德+km.才+km.功+km.赃;
+  // 严党线最高值
+  const maxFaction=Math.max(G.严党,G.徐党,G.清流);
+
+  /* ===== 提前结局（优先判定） ===== */
+  if(G.flags.革功名){return renderEnding('终身秀才',
+    `<p>乡试舞弊被查出，革除功名。你终身未能入仕。</p>
+     <p>父亲陆廷玉因此事受牵连，被降职调用。陆家从此一蹶不振。</p>
+     <p class="dim">——你以秀才之身终老，再无翻身之日。</p>`,
+    '乡试舞弊被查出，革除功名。',km,totalKM,G);}
+
+  if(G.flags.战死){return renderEnding('战死沙场',
+    `<p>庚戌之变中，你组织民壮北上勤王。混战之中，你身中数箭，倒在血泊里。</p>
+     <p>朝廷追赠你为光禄寺少卿，荫一子入国子监。但这一切，你都看不到了。</p>
+     <p class="dim">——你以忠烈之名，载入《明史·忠义传》。</p>`,
+    '庚戌之变中战死。',km,totalKM,G);}
+
+  if(G.flags.下狱处死){return renderEnding('下狱处死',
+    `<p>杨继盛案牵连，你被下诏狱。严党欲置你于死地，最终以"交结朋党"论罪，处斩。</p>
+     <p>临刑前，你想起嘉靖二十五年那个春天，父亲从工部回来，说起主考官的样子。</p>
+     <p class="dim">——你的名字，与杨继盛一起，被后人记住。</p>`,
+    '杨继盛案牵连，下狱处死。',km,totalKM,G);}
+
+  if(G.flags.满门抄斩){return renderEnding('满门抄斩',
+    `<p>严世蕃案牵连，你因深度依附严党、告密杨继盛同党，被列入逆案。</p>
+     <p>陆家满门抄斩，父亲陆廷玉亦未能幸免。</p>
+     <p class="dim">——站错队的代价，是全家的性命。</p>`,
+    '严党清算，满门抄斩。',km,totalKM,G);}
+
+  /* ===== 正式结局 ===== */
+  let endingName,endingDesc,endingSum;
+
+  // 位极人臣：徐党≥8，严党≤3，政绩≥60，京察无赃
+  if(G.徐党>=8 && G.严党<=3 && G.政绩>=60 && km.赃===0){
+    endingName='位极人臣';
+    endingDesc=`<p>嘉靖四十五年冬，世宗驾崩。徐阶草拟遗诏，裕王继位。</p>
+      <p>你以入阁为大学士，加太师或太傅衔，位列三公，权倾天下。</p>
+      <p>你主持朝政，革除严嵩弊政，起用被贬清流，一时朝野称颂。</p>
+      <p class="dim">——你的一生，从宛平秀才到内阁首辅，走完了嘉靖朝最完整的一条上升之路。</p>`;
+    endingSum=`<b>结局：位极人臣</b><br>
+      入阁为大学士，加太师衔。徐党${G.徐党}，严党${G.严党}，政绩${G.政绩}，京察无赃。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝官场最成功的结局。</span>`;
+  }
+  // 一代名臣：清流≥8，政绩≥50
+  else if(G.清流>=8 && G.政绩>=50){
+    endingName='一代名臣';
+    endingDesc=`<p>你官至尚书，位列九卿。因清流声望卓著，谥号"文正"或"忠介"。</p>
+      <p>你一生清廉自守，不畏权贵，在严嵩当权时敢于发声，在徐阶当国时不附权贵。</p>
+      <p>后修《明史》，你的名字列在《名臣传》中。</p>
+      <p class="dim">——你的一生，以风骨立身，以文章传世。</p>`;
+    endingSum=`<b>结局：一代名臣</b><br>
+      官至尚书，谥"文正"或"忠介"。清流声望${G.清流}，政绩${G.政绩}。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝清流最理想的结局。</span>`;
+  }
+  // 封疆大吏：外放≥3任，政绩≥40
+  else if(G.outerPostCount>=3 && G.政绩>=40){
+    endingName='封疆大吏';
+    endingDesc=`<p>你官至总督或巡抚，镇守一方。</p>
+      <p>你从知县起步，历任推官、知府、参政、按察使，最终开府建衙，威福自专。</p>
+      <p>你的一生，都在地方度过。你熟悉民情，善于治军理政，朝廷倚为干城。</p>
+      <p class="dim">——你的一生，远离朝堂纷争，却在地方留下了实实在在的政绩。</p>`;
+    endingSum=`<b>结局：封疆大吏</b><br>
+      官至总督或巡抚。外放经历${G.outerPostCount}任，政绩${G.政绩}。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝外官最成功的结局。</span>`;
+  }
+  // 官场联姻：官至三品以上，夫妻感情淡漠
+  else if(lv>=5 && G.married && G.spouseType){
+    endingName='官场联姻';
+    endingDesc=`<p>你官至三品以上，通过婚姻巩固了势力。</p>
+      <p>但你的妻子并非你所爱之人。夫妻相敬如宾，却也仅止于此。</p>
+      <p>夜深人静时，你偶尔会想起那个未曾选择的姑娘。</p>
+      <p class="dim">——你的一生，事业有成，感情却是一片空白。</p>`;
+    endingSum=`<b>结局：官场联姻</b><br>
+      官至三品以上。婚姻对象：${G.spouseType}。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝官场最常见的婚姻模式。</span>`;
+  }
+  // 因妻获罪：娶严党之女，严党线高，严嵩倒台后罢官流放
+  else if(G.flags.严党联姻 && G.严党>=10 && G.徐党<5){
+    endingName='因妻获罪';
+    endingDesc=`<p>你娶了严党之女，严嵩倒台后，你受牵连被罢官流放。</p>
+      <p>妻子在流放途中病逝。你独自一人，被发配到岭南烟瘴之地。</p>
+      <p>你想起当年婚礼上的红烛，想起岳父严世蕃那意味深长的笑容。</p>
+      <p class="dim">——你的一生，因婚姻而起，也因婚姻而落。</p>`;
+    endingSum=`<b>结局：因妻获罪</b><br>
+      娶严党之女，严嵩倒台后罢官流放。严党好感${G.严党}。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝党争中最惨烈的婚姻陷阱。</span>`;
+  }
+  // 孤独终老：事业有成但未娶或妻离子散，官至三品以上
+  else if(lv>=5 && !G.married){
+    endingName='孤独终老';
+    endingDesc=`<p>你官至三品以上，事业有成。但你没有娶妻，身边无人。</p>
+      <p>你的一生，都在官场中度过。案牍、公文、同僚、上官……占据了你的全部时间。</p>
+      <p>晚年致仕，你独居京城老宅。偶尔有同年故旧来访，谈起往事，你笑而不语。</p>
+      <p class="dim">——你的一生，功成名就，却无人为你送终。</p>`;
+    endingSum=`<b>结局：孤独终老</b><br>
+      官至三品以上，终身未娶。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝官场中最常见的人生遗憾。</span>`;
+  }
+  // 罢官流放：严党清算或海瑞案触怒徐阶
+  else if(G.flags.罢官流放){
+    endingName='罢官流放';
+    endingDesc=`<p>你因党争失势，被罢官流放。</p>
+      <p>从京城到岭南，走了三个月。你想起嘉靖二十五年那个春天，父亲从工部回来，说起主考官的样子。</p>
+      <p>你的人生，从那个春天开始，也从那个春天结束。</p>
+      <p class="dim">——你的一生，成也官场，败也官场。</p>`;
+    endingSum=`<b>结局：罢官流放</b><br>
+      因党争失势，被罢官流放。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝官场最残酷的结局之一。</span>`;
+  }
+  // 归隐田园：多次考满得"赃"或党争失势，辞官归乡
+  else if(km.赃>=2 || (lv<3 && G.政绩<20)){
+    endingName='归隐田园';
+    endingDesc=`<p>你多次考满得"赃"，或党争失势，最终辞官归乡。</p>
+      <p>回到宛平，你置了几亩薄田，开了一间书塾。父亲留下的老宅，被你重新修缮。</p>
+      <p>你教书、种花、饮酒、著书。偶尔有旧日同僚路过，谈起朝中事，你只是笑笑。</p>
+      <p class="dim">——你的一生，从官场退回到田园，却找到了真正的安宁。</p>`;
+    endingSum=`<b>结局：归隐田园</b><br>
+      考满赃面${km.赃}次，辞官归乡。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝官场中最洒脱的结局。</span>`;
+  }
+  // 默认：守土之官
+  else{
+    endingName='守土之官';
+    endingDesc=`<p>你终老于知县、推官任上，未能大用。</p>
+      <p>你的一生，都在基层度过。你审案、劝农、修水利、迎巡按。你做得很认真，但始终没有升上去。</p>
+      <p>晚年致仕，你在任所附近定居。百姓称你"陆青天"，为你立了生祠。</p>
+      <p class="dim">——你的一生，虽未显达，却也不曾辜负这一身官服。</p>`;
+    endingSum=`<b>结局：守土之官</b><br>
+      终老于知县、推官任上。<br>
+      <span style="color:var(--ink2)">——这是嘉靖朝大多数官员的真实结局。</span>`;
+  }
+
+  renderEnding(endingName,endingDesc,endingSum,km,totalKM,G);
+}
+
+function renderEnding(name,desc,sum,km,totalKM,G){
+  const lv=G.office?G.office.lv:0;
+  let html=`<div class="ending"><div class="mark">终</div><h1>${name}</h1>
+    <div class="desc">${desc}</div>
+    <div class="summary">${sum}<br><br>
+      <b>考满记录：</b>德${km.德} 才${km.才} 功${km.功} 赃${km.赃}（共${totalKM}次）<br>
+      <b>朝中关系：</b>严党 ${G.严党}　徐党 ${G.徐党}　清流 ${G.清流}<br>
+      <b>最终官职：</b>${G.office?G.office.name+'（'+G.office.rank+'）':'白身'}<br>
+      <b>外放经历：</b>${G.outerPostCount} 任　<b>最终政绩：</b>${G.政绩}　<b>银钱：</b>${G.银钱}两
+    </div>
+    <div class="stats">
+      <span>最终官职<b>${G.office?G.office.name:'白身'}</b></span>
+      <span>考满德面<b>${km.德}次</b></span>
+      <span>考满赃面<b>${km.赃}次</b></span>
+    </div>
+    <button class="btn-restart" onclick="location.reload()">重 开 一 局</button></div>`;
+  const story=$('story');story.className='story fade';story.innerHTML=html;
+}
+
+/* ============================================================
+   30回合场景数据 —— 严格按文档
+   ============================================================ */
+const SCENES={};
+
+/* ===== 第1回合·嘉靖二十五年春·乡试备考 ===== */
+SCENES[1]={
+  title:'嘉靖二十五年春 · 乡试备考',
+  text:`<p>父亲陆廷玉从工部回来，说今年秋闱主考是礼部侍郎孙承恩，偏爱稳正之文；同考官中有一人江南举人出身，极重策论。</p>
+  <div class="dialogue"><span class="speaker">父亲</span><span class="line">秉文，今年主考偏爱稳正，但同考官重策论。你若能在这两者之间找到平衡——</span></div>
+  <div class="inner-voice">你手里攥着父亲给你的几两银子。这是嘉靖二十五年的春天，距离秋闱还有半年。</div>`,
+  options:[
+    {label:'闭门苦读，打磨文章',tag:'清流孤臣线',tagClass:'t-wen',
+     sub:'文才+3，中举概率65%。结局倾向：清流孤臣线，若中举则殿试稳正。',
+     effect:()=>{G.文才+=3;G.flags.策略='苦读';addLog('闭门苦读，打磨文章。');}},
+    {label:'请父亲引荐，拜访同考官',tag:'权谋内阁线',tagClass:'t-tan',
+     sub:'交际+3，人脉+1，银钱-30两，中举概率+10%。结局倾向：权谋内阁线，欠人情但升迁快。',
+     effect:()=>{G.交际+=3;G.人脉+=1;G.银钱=Math.max(0,G.银钱-30);G.flags.策略='拜访';addLog('拜访同考官。');}},
+    {label:'加入国子监文社，结交严嵩门生',tag:'严党线',tagClass:'t-xian',
+     sub:'交际+2，严党好感+2，清流好感-1，中举概率+5%。结局倾向：严党线，若后期不转向则严嵩倒台后罢官。',
+     effect:()=>{G.交际+=2;G.严党+=2;G.清流-=1;G.flags.策略='文社';addLog('结交严嵩门生。');}}
+  ]
+};
+
+/* ===== 第2回合·嘉靖二十五年秋·乡试 ===== */
+SCENES[2]={
+  title:'嘉靖二十五年秋 · 乡试',
+  text:`<p>三场考试，每场三日。你注意到策论题涉及边患与财政。</p>
+  <p>第一场四书义，第二场论判诏诰表，第三场经史策。九天七夜，贡院号舍，一盏孤灯。</p>`,
+  options:[
+    {label:'四书义求稳，策论大胆建言',tag:'正常入仕',tagClass:'t-wen',
+     sub:'中举概率65%+10%。若中举，名次中等。结局：正常入仕。',
+     effect:()=>{G.flags.乡试策略='平衡';addLog('乡试：四书义求稳，策论大胆建言。');}},
+    {label:'全部稳妥作答',tag:'外官起步',tagClass:'t-ju',
+     sub:'中举概率65%。若中举，名次中下。结局：外官起步。',
+     effect:()=>{G.flags.乡试策略='稳妥';addLog('乡试：全部稳妥作答。');}},
+    {label:'花银钱打点考官',tag:'冒险',tagClass:'t-xian',
+     sub:'中举概率+15%，银钱-150两。若被查出，革除功名，提前结局"终身秀才"。若成功，日后被政敌揭发风险+。',
+     effect:()=>{
+       if(G.银钱>=150){G.银钱-=150;G.flags.乡试策略='打点';G.flags.打点考官=true;addLog('花银钱打点考官。');}
+       else{G.flags.乡试策略='稳妥';addLog('银钱不足，未能打点。');}
+     }}
+  ]
+};
+
+/* ===== 第3回合·嘉靖二十六年春·会试 ===== */
+SCENES[3]={
+  title:'嘉靖二十六年春 · 会试',
+  text:`<p>会试在京城贡院。主考礼部尚书费寀，同考官中有徐阶门生。</p>
+  <p>录取率约为百分之十。</p>`,
+  options:[
+    {label:'正常作答，不求奇',tag:'外官线',tagClass:'t-wen',
+     sub:'中进士概率60%。结局：三甲或二甲，外官线。',
+     effect:()=>{G.flags.会试策略='正常';G.flags.会试=true;addLog('会试：正常作答。');}},
+    {label:'策论迎合嘉靖帝道教偏好',tag:'翰林',tagClass:'t-xian',
+     sub:'中进士概率55%，若中名次高。结局：可能入翰林，但清流鄙视。',
+     effect:()=>{G.flags.会试策略='迎合';G.flags.会试=true;G.严党+=1;addLog('会试：迎合帝意。');}},
+    {label:'策论直言边患',tag:'严党/边才线',tagClass:'t-xian',
+     sub:'中进士概率50%，若中则被严嵩注意。结局：严党线或边才线。',
+     effect:()=>{G.flags.会试策略='直言';G.flags.会试=true;G.清流+=2;G.严党-=2;addLog('会试：直言边患。');}}
+  ]
+};
+
+/* ===== 第4回合·嘉靖二十六年春·殿试 ===== */
+SCENES[4]={
+  title:'嘉靖二十六年春 · 殿试',
+  text:`<p>殿试由嘉靖帝亲策，但帝常不亲临。等第决定初授。</p>`,
+  options:[
+    {label:'颂圣求稳',tag:'外官',tagClass:'t-wen',
+     sub:'三甲。结局：知县或推官，外官起步。',
+     effect:()=>{G.flags.殿试='三甲';G.examTitle='三甲进士';addLog('殿试：颂圣求稳，三甲。');}},
+    {label:'务实策论',tag:'京官',tagClass:'t-tan',
+     sub:'二甲或三甲。结局：若二甲可京官主事。',
+     effect:()=>{
+       if(G.文才>=70||chance(0.5)){G.flags.殿试='二甲';G.examTitle='二甲进士';addLog('殿试：务实策论，二甲。');}
+       else{G.flags.殿试='三甲';G.examTitle='三甲进士';addLog('殿试：务实策论，三甲。');}
+     }},
+    {label:'冒险直陈时弊',tag:'清流/外放',tagClass:'t-xian',
+     sub:'二甲概率低，三甲概率高；若嘉靖亲阅可擢升。结局：清流名臣线或外放。',
+     effect:()=>{
+       if(chance(0.2)){G.flags.殿试='二甲';G.examTitle='二甲进士';G.清流+=3;addLog('殿试：冒险直陈时弊，二甲。');}
+       else{G.flags.殿试='三甲';G.examTitle='三甲进士';G.清流+=2;addLog('殿试：冒险直陈时弊，三甲。');}
+     }}
+  ]
+};
+
+/* ===== 第5回合·嘉靖二十六年夏·授官与馆选 ===== */
+SCENES[5]={
+  title:'嘉靖二十六年夏 · 授官与馆选',
+  text:()=>`<p>陆秉文中${G.flags.殿试||'三甲'}进士。父亲活动，争取京官；馆选庶吉士也在此时。</p>`,
+  options:[
+    {label:'接受外放知县',tag:'外官线',tagClass:'t-wen',
+     sub:'正七品，外官。结局：外官线，政绩积累，升迁慢但稳。',
+     effect:()=>{G.office={lv:1,name:'知县',rank:'正七品',path:'外'};G.officeStartTurn=G.turn;G.outerPostCount++;addLog('授知县，外放。');}},
+    {label:'父亲活动争取京官主事',tag:'京官线',tagClass:'t-tan',
+     sub:'需人脉≥3、银钱≥100两。成功则正六品京官。结局：京官线，接近权力中心。',
+     effect:()=>{
+       if(G.人脉>=3&&G.银钱>=100){
+         G.银钱-=100;G.office={lv:4,name:'主事',rank:'正六品',path:'京'};G.officeStartTurn=G.turn;
+         addLog('授主事，留京任职。');
+       }else{
+         G.office={lv:1,name:'知县',rank:'正七品',path:'外'};G.officeStartTurn=G.turn;G.outerPostCount++;
+         addLog('活动失败，仍授知县。');
+       }
+     }},
+    {label:'参加馆选庶吉士',tag:'清流翰林线',tagClass:'t-xian',
+     sub:'文才65偏低，成功率30%。成功入翰林，正七品。结局：清流翰林线，入阁概率最高；失败则外放知县。',
+     effect:()=>{
+       if(G.文才>=70&&chance(0.30)){
+         G.office={lv:3,name:'给事中',rank:'正七品',path:'京'};G.officeStartTurn=G.turn;G.清流+=5;
+         addLog('馆选成功，入翰林。');
+       }else{
+         G.office={lv:1,name:'知县',rank:'正七品',path:'外'};G.officeStartTurn=G.turn;G.outerPostCount++;
+         addLog('馆选落选，授知县。');
+       }
+     }}
+  ]
+};
+
+/* ===== 第6回合·嘉靖二十六年秋·初任 ===== */
+SCENES[6]={
+  title:'嘉靖二十六年秋 · 初任',
+  text:()=>{
+    if(G.office&&G.office.path==='京')
+      return `<p>你入部视事。部务繁杂，公文堆积如山。堂官严厉，同僚各怀心思。</p>`;
+    return `<p>你到任。县中积案数十，前任亏空八百两。</p>`;
+  },
+  options:[
+    {label:'清廉自守，先清积案',tag:'清流',tagClass:'t-wen',
+     sub:'政绩+3，银钱少。结局：考满易得"德"，清流声望+。',
+     effect:()=>{G.政绩+=3;G.清流+=2;addLog('清廉自守，先清积案。');}},
+    {label:'收火耗补贴，先查亏空',tag:'贪官线',tagClass:'t-xian',
+     sub:'银钱+200两，政绩+2，"赃"概率+10%。结局：贪官线，可能被京察黜落。',
+     effect:()=>{G.银钱+=200;G.政绩+=2;G.flags.贪墨=true;addLog('收火耗补贴，先查亏空。');}},
+    {label:'攀附上官，疏通关系',tag:'权谋线',tagClass:'t-tan',
+     sub:'上官好感+2，政绩+1，同僚鄙夷。结局：权谋线，升迁快但人脉虚浮。',
+     effect:()=>{G.人脉+=2;G.政绩+=1;G.清流-=1;addLog('攀附上官，疏通关系。');}}
+  ]
+};
+
+/* ===== 第7回合·嘉靖二十七年春·县政或部务 ===== */
+SCENES[7]={
+  title:'嘉靖二十七年春 · 县政或部务',
+  text:`<p>春耕，水利失修；若京官则工部河工案牍堆积。</p>`,
+  options:[
+    {label:'动用县库存银修水利',tag:'民心',tagClass:'t-wen',
+     sub:'政绩+3，银钱-200两。结局：民心+，考满"德"概率+。',
+     effect:()=>{G.政绩+=3;G.银钱=Math.max(0,G.银钱-200);G.flags.修水利=true;addLog('动用县库存银修水利。');}},
+    {label:'向上官申请拨款',tag:'稳妥',tagClass:'t-ju',
+     sub:'政绩+2，上官好感+1，需等待。结局：稳妥，升迁正常。',
+     effect:()=>{G.政绩+=2;G.人脉+=1;addLog('向上官申请拨款。');}},
+    {label:'发动百姓自修，官府只出工匠',tag:'清誉',tagClass:'t-tan',
+     sub:'政绩+1，民心+2。结局：清誉+，但政绩不足。',
+     effect:()=>{G.政绩+=1;G.清流+=2;addLog('发动百姓自修。');}}
+  ]
+};
+
+/* ===== 第8回合·嘉靖二十七年秋·夏言被杀 ===== */
+SCENES[8]={
+  title:'嘉靖二十七年秋 · 夏言被杀',
+  text:`<p>夏言被严嵩构陷，弃市。朝局震动，与夏言有关系者需调整立场。</p>
+  <div class="dialogue"><span class="speaker">邸报</span><span class="line">夏言曾三度入阁，为首辅。其死，朝野震动。</span></div>`,
+  options:[
+    {label:'上疏鸣冤',tag:'清流名臣线',tagClass:'t-xian',
+     sub:'清流声望+5，严党好感-5，可能丢官下狱。结局：清流名臣线或提前罢官。',
+     effect:()=>{
+       G.清流+=5;G.严党-=5;
+       if(chance(0.35)){G.flags.罢官流放=true;addLog('上疏鸣冤，被贬。');}
+       else addLog('上疏鸣冤，未被贬。');
+     }},
+    {label:'沉默',tag:'中立线',tagClass:'t-ju',
+     sub:'安全。结局：中立线。',
+     effect:()=>{addLog('夏言案中保持沉默。');}},
+    {label:'附和严嵩，上疏攻击夏言',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+3，清流声望-3。结局：严党线，短期升迁快。',
+     effect:()=>{G.严党+=3;G.清流-=3;addLog('附和严嵩，攻击夏言。');}}
+  ]
+};
+
+/* ===== 第9回合·嘉靖二十八年春·第一次考满 ===== */
+SCENES[9]={
+  title:'嘉靖二十八年春 · 第一次考满',
+  text:`<p>任满一考，触发"铨选迁转·德才功赃"判定。</p>`,
+  options:[
+    {label:'接受结果',tag:'正常',tagClass:'t-ju',
+     sub:'按骰面升、留、降。结局：正常迁转。',
+     effect:()=>{G.officeStartTurn=G.turn;doKaoman();}},
+    {label:'花银钱300两活动改判',tag:'银钱',tagClass:'t-xian',
+     sub:'若原为"赃"，可改为"功"。结局：银钱-，但避免降黜。',
+     effect:()=>{
+       if(G.银钱>=300){G.银钱-=300;G.flags.考满改功=true;addLog('花银钱300两活动改判。');}
+       G.officeStartTurn=G.turn;doKaoman();
+     }},
+    {label:'若得"赃"，辞官归乡',tag:'归隐',tagClass:'t-ju',
+     sub:'提前结局"归隐田园"或"终身不仕"。',
+     effect:()=>{G.flags.可辞官=true;G.officeStartTurn=G.turn;doKaoman();}}
+  ]
+};
+
+/* ===== 第10回合·嘉靖二十九年夏·庚戌之变 ===== */
+SCENES[10]={
+  title:'嘉靖二十九年夏 · 庚戌之变',
+  text:`<p>俺答汗兵临北京城下，京师震动。你收到巡抚或部堂紧急命令。</p>`,
+  options:[
+    {label:'组织民壮，北上勤王',tag:'名将线',tagClass:'t-xian',
+     sub:'政绩+5，战死风险20%。若成功，越级擢升。结局：名将线或提前战死。',
+     effect:()=>{
+       if(chance(0.20)){G.flags.战死=true;addLog('庚戌之变中战死。');}
+       else{G.政绩+=5;G.清流+=3;G.flags.勤王有功=true;addLog('庚戌之变中勤王立功。');}
+     }},
+    {label:'固守县城或京营值守',tag:'稳妥',tagClass:'t-wen',
+     sub:'政绩+3，安全。结局：稳妥升迁。',
+     effect:()=>{G.政绩+=3;addLog('庚戌之变中固守。');}},
+    {label:'捐俸助军，表示忠心',tag:'银钱',tagClass:'t-ju',
+     sub:'政绩+2，银钱-200两。结局：上官好感+，升迁正常。',
+     effect:()=>{G.政绩+=2;G.银钱=Math.max(0,G.银钱-200);addLog('庚戌之变中捐俸助军。');}}
+  ]
+};
+
+/* ===== 第11回合·嘉靖二十九年秋·勤王后迁转 ===== */
+SCENES[11]={
+  title:'嘉靖二十九年秋 · 勤王后迁转',
+  text:()=>G.flags.勤王有功
+    ?`<p>你勤王有功，朝廷议叙。</p>`
+    :`<p>你守城有功，正常考满迁转。</p>`,
+  options:[
+    {label:'接受内升给事中',tag:'京官线',tagClass:'t-tan',
+     sub:'正七品京官，人脉+2。结局：京官线，可接近内阁。',
+     effect:()=>{G.office={lv:3,name:'给事中',rank:'正七品',path:'京'};G.officeStartTurn=G.turn;G.人脉+=2;addLog('内升给事中。');}},
+    {label:'接受外升知府',tag:'外官线',tagClass:'t-wen',
+     sub:'从四品外官，政绩+3。结局：外官线，封疆大吏方向。',
+     effect:()=>{G.office={lv:5,name:'知府',rank:'从四品',path:'外'};G.officeStartTurn=G.turn;G.政绩+=3;G.outerPostCount++;addLog('外升知府。');}},
+    {label:'活动争取入京',tag:'权谋线',tagClass:'t-xian',
+     sub:'需银钱≥500两、人脉≥5。成功则京官，失败则外放。结局：权谋线。',
+     effect:()=>{
+       if(G.银钱>=500&&G.人脉>=5){
+         G.银钱-=500;G.office={lv:4,name:'主事',rank:'正六品',path:'京'};G.officeStartTurn=G.turn;
+         addLog('重金活动，入京为主事。');
+       }else{
+         G.office={lv:5,name:'知府',rank:'从四品',path:'外'};G.officeStartTurn=G.turn;G.outerPostCount++;
+         addLog('活动失败，外放知府。');
+       }
+     }}
+  ]
+};
+
+/* ===== 第12回合·嘉靖三十年春·沈炼案 ===== */
+SCENES[12]={
+  title:'嘉靖三十年春 · 沈炼案',
+  text:`<p>锦衣卫经历沈炼上疏弹劾严嵩"十罪"，被杖责后谪发口外。</p>`,
+  options:[
+    {label:'暗中为沈炼送行',tag:'清流线',tagClass:'t-wen',
+     sub:'清流声望+2，严党好感-2。结局：清流线。',
+     effect:()=>{G.清流+=2;G.严党-=2;addLog('暗中为沈炼送行。');}},
+    {label:'沉默',tag:'中立线',tagClass:'t-ju',
+     sub:'安全。结局：中立线。',
+     effect:()=>{addLog('沈炼案中保持沉默。');}},
+    {label:'向严党告密沈炼同党',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+5，清流声望-5。结局：严党线，日后清算风险极高。',
+     effect:()=>{G.严党+=5;G.清流-=5;G.flags.告密沈炼=true;addLog('向严党告密沈炼同党。');}}
+  ]
+};
+
+/* ===== 第13回合·嘉靖三十年夏·京察 ===== */
+SCENES[13]={
+  title:'嘉靖三十年夏 · 京察',
+  text:`<p>京察，四品以上自陈，五品以下由吏部、都察院考察。</p>`,
+  options:[
+    {label:'拜访都察院同乡，探听风向',tag:'交际',tagClass:'t-tan',
+     sub:'交际+2，人脉+1。结局：留任或升转。',
+     effect:()=>{G.交际+=2;G.人脉+=1;addLog('拜访都察院同乡。');}},
+    {label:'以政绩自陈，不活动',tag:'政绩',tagClass:'t-wen',
+     sub:'结果取决于政绩。结局：政绩高则升，低则降。',
+     effect:()=>{if(G.政绩>=20)G.政绩+=2;addLog('以政绩自陈。');}},
+    {label:'向严党靠拢，寻求庇护',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+2，清流好感-1。结局：严党线，短期安全。',
+     effect:()=>{G.严党+=2;G.清流-=1;addLog('向严党靠拢。');}}
+  ]
+};
+
+/* ===== 第14回合·嘉靖三十一年春·徐阶入阁 ===== */
+SCENES[14]={
+  title:'嘉靖三十一年春 · 徐阶入阁',
+  text:`<p>徐阶入阁，排在严嵩之后。朝中暗流涌动。</p>`,
+  options:[
+    {label:'暗中向徐阶示好',tag:'徐阶线',tagClass:'t-xian',
+     sub:'徐阶好感+3，严党好感-2。结局：徐阶线，日后入阁机会+。',
+     effect:()=>{G.徐党+=3;G.严党-=2;addLog('暗中向徐阶示好。');}},
+    {label:'继续依附严党',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+2。结局：严党线，严嵩倒台后罢官。',
+     effect:()=>{G.严党+=2;G.flags.附严=true;addLog('继续依附严党。');}},
+    {label:'保持中立，以政绩自保',tag:'中立线',tagClass:'t-ju',
+     sub:'安全，但两边不靠。结局：升迁慢，但风险低。',
+     effect:()=>{addLog('保持中立。');}}
+  ]
+};
+
+/* ===== 第15回合·嘉靖三十二年春·杨继盛弹劾严嵩 ===== */
+SCENES[15]={
+  title:'嘉靖三十二年春 · 杨继盛弹劾严嵩',
+  text:`<p>杨继盛上《请诛贼臣疏》，弹劾严嵩"五奸十大罪"，下诏狱。你与杨有同年之谊。</p>`,
+  options:[
+    {label:'上疏附和弹劾',tag:'名垂青史',tagClass:'t-xian',
+     sub:'清流声望+5，可能丢官下狱。结局：名垂青史或提前处死。',
+     effect:()=>{
+       G.清流+=5;G.严党-=10;
+       if(chance(0.30)){G.flags.下狱处死=true;addLog('上疏附和弹劾，下狱处死。');}
+       else addLog('上疏附和弹劾。');
+     }},
+    {label:'暗中送银钱给杨继盛家属',tag:'清流线',tagClass:'t-tan',
+     sub:'清流声望+2，银钱-200两，风险低。结局：清流线。',
+     effect:()=>{G.清流+=2;G.银钱=Math.max(0,G.银钱-200);addLog('暗中资助杨继盛家属。');}},
+    {label:'向严嵩告密杨继盛同党',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+5，清流声望-5。结局：严党线，满门抄斩风险+。',
+     effect:()=>{G.严党+=5;G.清流-=5;G.flags.告密杨继盛=true;addLog('向严嵩告密杨继盛同党。');}},
+    {label:'沉默',tag:'中立线',tagClass:'t-ju',
+     sub:'安全，但内心不安。结局：中立线。',
+     effect:()=>{addLog('杨继盛案中保持沉默。');}}
+  ]
+};
+
+/* ===== 第16回合·嘉靖三十二年秋·杨继盛下狱 ===== */
+SCENES[16]={
+  title:'嘉靖三十二年秋 · 杨继盛下狱',
+  text:`<p>杨继盛在狱中受刑，朝中无人敢救。</p>`,
+  options:[
+    {label:'上疏救杨继盛',tag:'清流名臣',tagClass:'t-xian',
+     sub:'清流声望+5，可能同罪下狱。结局：清流名臣或提前罢官。',
+     effect:()=>{
+       G.清流+=5;
+       if(chance(0.25)){G.flags.下狱处死=true;addLog('上疏救杨继盛，下狱处死。');}
+       else addLog('上疏救杨继盛。');
+     }},
+    {label:'托人照顾狱中生活',tag:'清流线',tagClass:'t-tan',
+     sub:'清流声望+2，风险低。结局：安全，清流认可。',
+     effect:()=>{G.清流+=2;G.银钱=Math.max(0,G.银钱-100);addLog('托人照顾杨继盛狱中生活。');}},
+    {label:'不参与',tag:'中立/严党线',tagClass:'t-ju',
+     sub:'安全，但清流圈子疏远。结局：中立或严党线。',
+     effect:()=>{G.清流-=2;addLog('杨继盛狱中案不参与。');}}
+  ]
+};
+
+/* ===== 第17回合·嘉靖三十三年春·严党压力 ===== */
+SCENES[17]={
+  title:'嘉靖三十三年春 · 严党压力',
+  text:`<p>严嵩权势正盛，你若不依附，可能被外放或降调。</p>`,
+  options:[
+    {label:'请求外放避祸',tag:'封疆大吏',tagClass:'t-wen',
+     sub:'外官线，政绩+2。结局：封疆大吏方向，远离党争。',
+     effect:()=>{G.政绩+=2;G.outerPostCount++;G.flags.外放避祸=true;addLog('请求外放避祸。');}},
+    {label:'留在京中，小心周旋',tag:'权谋线',tagClass:'t-tan',
+     sub:'谋略+2，风险+。结局：权谋线，可能升也可能贬。',
+     effect:()=>{G.谋略+=2;addLog('留在京中，小心周旋。');}},
+    {label:'纳严党之女为妾',tag:'官场联姻',tagClass:'t-xian',
+     sub:'严党好感+3，联姻。结局：官场联姻，严嵩倒台后因妻获罪。',
+     effect:()=>{G.严党+=3;G.married=true;G.spouseType='严党之女';G.flags.严党联姻=true;addLog('纳严党之女为妾。');}}
+  ]
+};
+
+/* ===== 第18回合·嘉靖三十四年秋·杨继盛死 ===== */
+SCENES[18]={
+  title:'嘉靖三十四年秋 · 杨继盛死',
+  text:`<p>杨继盛被杀，临刑赋诗，天下传诵。你作为同年，是否出面收尸？</p>`,
+  options:[
+    {label:'出面收尸，写墓志铭',tag:'一代名臣',tagClass:'t-xian',
+     sub:'清流声望+5，严党好感-5，风险极高。结局：一代名臣或提前下狱。',
+     effect:()=>{
+       G.清流+=5;G.严党-=5;
+       if(chance(0.30)){G.flags.下狱处死=true;addLog('出面收尸，被下狱处死。');}
+       else addLog('出面收尸，写墓志铭。');
+     }},
+    {label:'暗中托人收尸',tag:'清流线',tagClass:'t-tan',
+     sub:'清流声望+2，风险低。结局：清流线，安全。',
+     effect:()=>{G.清流+=2;addLog('暗中托人收尸。');}},
+    {label:'不参与',tag:'中立/严党线',tagClass:'t-ju',
+     sub:'安全，但清流疏远。结局：中立或严党线。',
+     effect:()=>{G.清流-=2;addLog('杨继盛后事不参与。');}}
+  ]
+};
+
+/* ===== 第19回合·嘉靖三十五年春·考满迁转 ===== */
+SCENES[19]={
+  title:'嘉靖三十五年春 · 考满迁转',
+  text:`<p>第二次考满，触发"德才功赃"判定。政绩、清流声望、严党/徐阶好感影响骰面。</p>`,
+  options:[
+    {label:'接受结果',tag:'正常',tagClass:'t-ju',
+     sub:'德→越级升，才→升一级，功→留任或平调，赃→降调。结局：决定最终官职基础。',
+     effect:()=>{G.officeStartTurn=G.turn;doKaoman();}},
+    {label:'花银钱500两活动改判',tag:'银钱',tagClass:'t-xian',
+     sub:'若赃改功。结局：银钱-，避免降黜。',
+     effect:()=>{
+       if(G.银钱>=500){G.银钱-=500;G.flags.考满改功=true;addLog('花银钱500两活动改判。');}
+       G.officeStartTurn=G.turn;doKaoman();
+     }},
+    {label:'辞官归隐',tag:'归隐田园',tagClass:'t-ju',
+     sub:'提前结局"归隐田园"。',
+     effect:()=>{G.flags.罢官流放=true;G.flags.主动辞官=true;addLog('辞官归隐。');}}
+  ]
+};
+
+/* ===== 第20回合·嘉靖三十六年春·京察 ===== */
+SCENES[20]={
+  title:'嘉靖三十六年春 · 京察',
+  text:`<p>又逢京察，严嵩权势已不如前，徐阶暗中布局渐显。</p>`,
+  options:[
+    {label:'暗中向徐阶示好',tag:'徐阶线',tagClass:'t-xian',
+     sub:'徐阶好感+3，严党好感-2。结局：徐阶线，入阁机会+。',
+     effect:()=>{G.徐党+=3;G.严党-=2;addLog('暗中向徐阶示好。');}},
+    {label:'继续依附严党',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+2。结局：严党线，严嵩倒台后罢官。',
+     effect:()=>{G.严党+=2;G.flags.附严=true;addLog('继续依附严党。');}},
+    {label:'保持中立，以政绩自保',tag:'中立线',tagClass:'t-ju',
+     sub:'安全。结局：升迁慢，但风险低。',
+     effect:()=>{addLog('保持中立。');}}
+  ]
+};
+
+/* ===== 第21回合·嘉靖三十七年春·严嵩权势顶峰 ===== */
+SCENES[21]={
+  title:'嘉靖三十七年春 · 严嵩权势顶峰',
+  text:`<p>严嵩寿宴，京官争相赴宴。你收到请帖。</p>`,
+  options:[
+    {label:'赴宴并送厚礼',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+3，银钱-500两。结局：严党线，日后清算受牵连。',
+     effect:()=>{G.严党+=3;G.银钱=Math.max(0,G.银钱-500);G.flags.附严=true;addLog('赴严嵩寿宴，送厚礼。');}},
+    {label:'赴宴但不送礼',tag:'中立偏严',tagClass:'t-ju',
+     sub:'安全，严党好感+1。结局：中立偏严。',
+     effect:()=>{G.严党+=1;addLog('赴宴但不送礼。');}},
+    {label:'不去',tag:'清流线',tagClass:'t-wen',
+     sub:'严党可能记恨。结局：清流线或严党打压。',
+     effect:()=>{G.严党-=5;G.清流+=3;addLog('拒赴严嵩寿宴。');}}
+  ]
+};
+
+/* ===== 第22回合·嘉靖三十八年春·东南倭患 ===== */
+SCENES[22]={
+  title:'嘉靖三十八年春 · 东南倭患',
+  text:`<p>倭寇猖獗，朝廷急缺兵备道、抗倭官员。</p>`,
+  options:[
+    {label:'请调浙江抗倭',tag:'名将线',tagClass:'t-xian',
+     sub:'军功+，政绩+3，危险。结局：名将线或战死。',
+     effect:()=>{
+       if(chance(0.15)){G.flags.战死=true;addLog('请调浙江抗倭，战死。');}
+       else{G.政绩+=3;G.outerPostCount++;addLog('请调浙江抗倭。');}
+     }},
+    {label:'留在京中',tag:'京官线',tagClass:'t-ju',
+     sub:'稳定升迁。结局：京官线。',
+     effect:()=>{addLog('留在京中。');}},
+    {label:'入兵部任职',tag:'兵部线',tagClass:'t-tan',
+     sub:'人脉+2，政绩+2。结局：兵部线，日后可总督。',
+     effect:()=>{G.人脉+=2;G.政绩+=2;addLog('入兵部任职。');}}
+  ]
+};
+
+/* ===== 第23回合·嘉靖三十九年春·严嵩失宠前兆 ===== */
+SCENES[23]={
+  title:'嘉靖三十九年春 · 严嵩失宠前兆',
+  text:`<p>严嵩之妻欧阳氏病重，严世蕃居丧，严嵩失去代笔之人。</p>`,
+  options:[
+    {label:'暗中准备转向徐阶',tag:'徐阶线',tagClass:'t-xian',
+     sub:'谋略+2，徐阶好感+2。结局：徐阶线。',
+     effect:()=>{G.谋略+=2;G.徐党+=2;addLog('暗中准备转向徐阶。');}},
+    {label:'向严嵩送厚礼慰问',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+3，银钱-500两。结局：严党线，风险+。',
+     effect:()=>{G.严党+=3;G.银钱=Math.max(0,G.银钱-500);addLog('向严嵩送厚礼慰问。');}},
+    {label:'接触徐阶门生，试探风向',tag:'徐阶线',tagClass:'t-tan',
+     sub:'徐阶好感+2，严党好感-1。结局：徐阶线。',
+     effect:()=>{G.徐党+=2;G.严党-=1;addLog('接触徐阶门生。');}}
+  ]
+};
+
+/* ===== 第24回合·嘉靖四十年春·严嵩失宠 ===== */
+SCENES[24]={
+  title:'嘉靖四十年春 · 严嵩失宠',
+  text:`<p>万寿宫大火，严嵩建议嘉靖帝暂居南城，徐阶建议重修万寿宫，帝采纳徐阶。</p>`,
+  options:[
+    {label:'上疏支持徐阶重修之议',tag:'徐阶线',tagClass:'t-tan',
+     sub:'徐阶好感+3，严党好感-3。结局：徐阶线，升迁快。',
+     effect:()=>{G.徐党+=3;G.严党-=3;addLog('支持徐阶重修之议。');}},
+    {label:'沉默',tag:'中立',tagClass:'t-ju',
+     sub:'安全。结局：中立。',
+     effect:()=>{addLog('万寿宫之议中保持沉默。');}},
+    {label:'为严嵩辩护',tag:'严党线',tagClass:'t-xian',
+     sub:'严党好感+3，风险极高。结局：严党线，严嵩倒台后罢官。',
+     effect:()=>{G.严党+=3;G.flags.附严=true;addLog('为严嵩辩护。');}}
+  ]
+};
+
+/* ===== 第25回合·嘉靖四十一年春·严嵩倒台 ===== */
+SCENES[25]={
+  title:'嘉靖四十一年春 · 严嵩倒台',
+  text:`<p>御史邹应龙弹劾严世蕃，严嵩被勒令致仕，严世蕃下狱。</p>`,
+  options:[
+    {label:'率先上疏清算严党',tag:'位极人臣',tagClass:'t-tan',
+     sub:'徐阶好感+5，若成功越级升。结局：位极人臣线。',
+     effect:()=>{
+       G.徐党+=5;G.清流+=5;
+       if(chance(0.6)&&G.office){
+         const nl=Math.min(G.office.lv+1,11);
+         const no=OFFICES.find(o=>o.lv===nl);
+         if(no){G.office={lv:nl,name:no.name,rank:no.rank,path:no.path||'外'};G.officeStartTurn=G.turn;}
+         addLog('率先上疏清算严党，越级升迁。');
+       }else addLog('率先上疏清算严党。');
+     }},
+    {label:'静观其变',tag:'正常',tagClass:'t-ju',
+     sub:'安全。结局：正常迁转。',
+     effect:()=>{addLog('静观其变。');}},
+    {label:'为严嵩求情',tag:'罢官',tagClass:'t-xian',
+     sub:'罢官风险极高。结局：提前罢官或流放。',
+     effect:()=>{
+       if(chance(0.7)){G.flags.罢官流放=true;addLog('为严嵩求情，遭罢官。');}
+       else addLog('为严嵩求情，未遭罢官。');
+     }}
+  ]
+};
+
+/* ===== 第26回合·嘉靖四十二年春·徐阶当权清算 ===== */
+SCENES[26]={
+  title:'嘉靖四十二年春 · 徐阶当权清算',
+  text:`<p>徐阶成为首辅，清算严党。你此前若依附严党，面临被清算风险。</p>`,
+  options:[
+    {label:'主动向徐阶坦白，交出严党交往证据',tag:'徐阶线',tagClass:'t-tan',
+     sub:'徐阶好感+3，但可能被清流视为反复。结局：徐阶线，官至尚书。',
+     effect:()=>{G.徐党+=3;G.清流-=2;addLog('向徐阶坦白，交出证据。');}},
+    {label:'销毁证据，隐忍待机',tag:'冒险',tagClass:'t-xian',
+     sub:'风险：被揭发则罢官。结局：权谋线或罢官。',
+     effect:()=>{
+       if(chance(0.6))addLog('销毁证据，隐忍待机。');
+       else{G.flags.罢官流放=true;addLog('证据被揭发，遭罢官。');}
+     }},
+    {label:'通过同年关系向徐阶求情',tag:'人脉线',tagClass:'t-tan',
+     sub:'需人脉≥8。成功则安全，失败则罢官。结局：人脉线。',
+     effect:()=>{
+       if(G.人脉>=8){G.徐党+=3;addLog('通过同年求情，得免。');}
+       else{G.flags.罢官流放=true;addLog('人脉不足，遭罢官。');}
+     }}
+  ]
+};
+
+/* ===== 第27回合·嘉靖四十三年春·严世蕃案 ===== */
+SCENES[27]={
+  title:'嘉靖四十三年春 · 严世蕃案',
+  text:`<p>严世蕃被控谋逆，朝议处死。你如何表态？</p>`,
+  options:[
+    {label:'上疏请诛严世蕃',tag:'徐阶线',tagClass:'t-tan',
+     sub:'徐阶好感+3，清流声望+2。结局：徐阶线，升迁。',
+     effect:()=>{G.徐党+=3;G.清流+=2;addLog('上疏请诛严世蕃。');}},
+    {label:'沉默',tag:'中立',tagClass:'t-ju',
+     sub:'安全。结局：中立。',
+     effect:()=>{addLog('严世蕃案中保持沉默。');}},
+    {label:'暗中营救严世蕃',tag:'满门抄斩',tagClass:'t-xian',
+     sub:'严党好感+3，徐阶好感-5。结局：满门抄斩风险+。',
+     effect:()=>{
+       G.严党+=3;G.徐党-=5;
+       if(G.flags.告密杨继盛||G.flags.严党联姻){G.flags.满门抄斩=true;addLog('暗中营救严世蕃，满门抄斩。');}
+       else addLog('暗中营救严世蕃。');
+     }}
+  ]
+};
+
+/* ===== 第28回合·嘉靖四十四年秋·严嵩抄家 ===== */
+SCENES[28]={
+  title:'嘉靖四十四年秋 · 严嵩抄家',
+  text:`<p>严嵩被抄家，寄食墓舍。你路过严嵩旧宅。</p>`,
+  options:[
+    {label:'送银钱接济',tag:'清流线',tagClass:'t-tan',
+     sub:'清流声望-1，内心+1。结局：清流线受损，但人格完整。',
+     effect:()=>{G.清流-=1;G.银钱=Math.max(0,G.银钱-100);addLog('送银钱接济严嵩。');}},
+    {label:'避而不见',tag:'中立',tagClass:'t-ju',
+     sub:'安全。结局：中立。',
+     effect:()=>{addLog('避而不见。');}},
+    {label:'上疏请求宽宥严嵩',tag:'罢官',tagClass:'t-xian',
+     sub:'触怒徐阶，风险极高。结局：提前罢官。',
+     effect:()=>{
+       G.徐党-=10;
+       if(chance(0.6)){G.flags.罢官流放=true;addLog('上疏请求宽宥严嵩，遭罢官。');}
+       else addLog('上疏请求宽宥严嵩。');
+     }}
+  ]
+};
+
+/* ===== 第29回合·嘉靖四十五年春·海瑞上疏 ===== */
+SCENES[29]={
+  title:'嘉靖四十五年春 · 海瑞上疏',
+  text:`<p>海瑞上《治安疏》，直言嘉靖帝之过，被下狱。朝中无人敢救。</p>`,
+  options:[
+    {label:'上疏为海瑞求情',tag:'一代名臣',tagClass:'t-xian',
+     sub:'清流声望+5，可能丢官。结局：一代名臣或提前罢官。',
+     effect:()=>{
+       G.清流+=5;
+       if(chance(0.35)){G.flags.罢官流放=true;addLog('上疏为海瑞求情，遭罢官。');}
+       else addLog('上疏为海瑞求情。');
+     }},
+    {label:'暗中托人照顾海瑞狱中生活',tag:'清流线',tagClass:'t-tan',
+     sub:'清流声望+2。结局：安全，清流认可。',
+     effect:()=>{G.清流+=2;addLog('暗中照顾海瑞。');}},
+    {label:'沉默',tag:'中立',tagClass:'t-ju',
+     sub:'安全。结局：中立。',
+     effect:()=>{addLog('海瑞案中保持沉默。');}}
+  ]
+};
+
+/* ===== 第30回合·嘉靖四十五年冬·结局结算 ===== */
+SCENES[30]={
+  title:'嘉靖四十五年冬 · 结局结算',
+  text:`<p>嘉靖帝驾崩，徐阶草遗诏，裕王继位。你的最终官职、散阶、政绩、党争立场、家族感情状态，共同决定结局。</p>
+  <div class="inner-voice">综合判定以下变量：最终官职、考满等第累计、党争立场、人脉网络、家族状态、感情状态。</div>`,
+  options:[
+    {label:'回顾此生',tag:'结局',tagClass:'t-tan',
+     sub:'触发最终结局判定',
+     effect:()=>{endGame('正常终局');}}
+  ]
+};
+
+/* ============================================================
+   启动
+   ============================================================ */
+function boot(){
+  G.turn=1;
+  addLog('嘉靖二十五年春，陆秉文入局。');
+  renderHUD();
+  renderScene(SCENES[1]);
+}
+boot();
+
+$('logBtn').onclick=()=>{$('logPanel').classList.toggle('show');};
+</script>
+</body>
+</html>
